@@ -1,0 +1,16 @@
+{
+  "vigilance_fire": {
+    "sounds": [
+      {
+        "name": "azurelibguns:vigilance_fire"
+      }
+    ]
+  },
+  "vigilance_reload": {
+    "sounds": [
+      {
+        "name": "azurelibguns:vigilance_reload"
+      }
+    ]
+  }
+}

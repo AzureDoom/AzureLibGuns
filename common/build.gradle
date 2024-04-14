@@ -1,0 +1,42 @@
+plugins {
+    id 'idea'
+    id 'java'
+    id 'maven-publish'
+    id 'org.spongepowered.gradle.vanilla'
+}
+base {
+    archivesName = "${mod_name}-common-${minecraft_version}"
+}
+minecraft {
+    version(minecraft_version)
+    if (file("src/main/resources/${mod_id}.aw").exists()) {
+        accessWideners(file("src/main/resources/${mod_id}.aw"))
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://libs.azuredoom.com:4443/mods' }
+    maven { url 'https://jm.gserv.me/repository/maven-public/' }
+}
+
+dependencies {
+    compileOnly group: 'org.spongepowered', name: 'mixin', version: '0.8.5'
+    compileOnly "mod.azure.azurelib:azurelib-neo-1.20.4:${azurelib_version}"
+    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.3.5"))
+    implementation 'mysticdrew:common-networking-common:1.0.6-1.20.4'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId base.archivesName.get()
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url "file://" + System.getenv("local_maven")
+        }
+    }
+}

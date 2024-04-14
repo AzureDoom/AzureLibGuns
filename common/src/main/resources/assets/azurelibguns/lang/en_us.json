@@ -1,0 +1,19 @@
+{
+  "item.azurelibguns.disc.ammo": "Ammo: ",
+  "item.azurelibguns.disc.heat": "Heat Level: ",
+  "item.azurelibguns.disc.firemode": "Fire Mode: ",
+  "item.azurelibguns.disc.semi": "Semi Automatic",
+  "item.azurelibguns.disc.auto": "Automatic",
+  "item.azurelibguns.disc.single": "Single",
+  "item.azurelibguns.disc.burst": "Burst",
+  "item.azurelibguns.disc.damagetype": "Damage Type: ",
+  "item.azurelibguns.disc.energy": "Energy",
+  "item.azurelibguns.disc.explosive": "Explosive",
+  "item.azurelibguns.disc.ballistic": "Ballistic",
+  "item.azurelibguns.disc.apballistic": "Armour-piercing Ballistic",
+  "item.azurelibguns.disc.incendiary": "incendiary",
+  "item.azurelibguns.peacemaker": "P-2 Peacemaker",
+  "item.azurelibguns.redeemer": "P-19 Redeemer",
+  "item.azurelibguns.senator": "P-4 Senator",
+  "item.azurelibguns.dagger": "LAS-7 Dagger"
+}

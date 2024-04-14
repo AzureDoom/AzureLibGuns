@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "package": "mod.azure.azurelibguns.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "renameme.refmap.json",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "PlayerMixin",
+    "VillagerMixin"
+  ],
+  "client": [
+    "client.AbstractClientPlayerMixin",
+    "client.GameRendererMixin",
+    "client.HeldItemRendererMixin",
+    "client.MinecraftMixin",
+    "client.PlayerRendererMixin"
+  ]
+}
