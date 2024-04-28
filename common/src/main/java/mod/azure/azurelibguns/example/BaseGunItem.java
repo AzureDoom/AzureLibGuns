@@ -305,12 +305,12 @@ public abstract class BaseGunItem extends Item implements GeoItem {
 
     @Override
     public void appendHoverText(ItemStack itemStack, Level level, @NotNull List<Component> tooltip, @NotNull TooltipFlag tooltipFlag) {
-        if (itemStack.getOrCreateTag().getInt(Constants.DAMAGETYPE_STRING) != 1) tooltip.add(
-                Component.translatable("item.azurelibguns.disc.ammo").withStyle(ChatFormatting.ITALIC).append(
-                        String.valueOf(itemStack.getOrCreateTag().getInt(Constants.AMMO_STRING))));
-        if (itemStack.getOrCreateTag().getInt(Constants.DAMAGETYPE_STRING) == 1) tooltip.add(
-                Component.translatable("item.azurelibguns.disc.heat").withStyle(ChatFormatting.ITALIC).append(
-                        String.valueOf(itemStack.getOrCreateTag().getInt(String.valueOf(beamTicks)))));
+        if (itemStack.getOrCreateTag().getInt(Constants.DAMAGETYPE_STRING) != Constants.energy.getName().hashCode())
+            tooltip.add(Component.translatable("item.azurelibguns.disc.ammo").withStyle(ChatFormatting.ITALIC).append(
+                    String.valueOf(itemStack.getOrCreateTag().getInt(Constants.AMMO_STRING))));
+        if (itemStack.getOrCreateTag().getInt(Constants.DAMAGETYPE_STRING) == Constants.energy.getName().hashCode())
+            tooltip.add(Component.translatable("item.azurelibguns.disc.heat").withStyle(ChatFormatting.ITALIC).append(
+                    String.valueOf(itemStack.getOrCreateTag().getInt(String.valueOf(beamTicks)))));
         tooltip.add(Component.translatable("item.azurelibguns.disc.firemode").withStyle(ChatFormatting.ITALIC).append(
                 Component.translatable(this.getCurrentFireMode(itemStack).getName())));
         tooltip.add(Component.translatable("item.azurelibguns.disc.damagetype").withStyle(ChatFormatting.ITALIC).append(
